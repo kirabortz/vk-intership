@@ -23,7 +23,14 @@ function App() {
 
       <span className={classNames.btnText}>Скажи как мне жить, если нет стимула</span>
 
-      <Counter quantity={quantity} size={24} className={classNames.counter} />
+      <Counter
+        variant={'primary'}
+        stroke={false}
+        pulse={false}
+        quantity={quantity}
+        size={24}
+        className={classNames.counter}
+      />
     </Button>
   )
 }
