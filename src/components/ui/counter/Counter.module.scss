@@ -1,0 +1,104 @@
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: var(--font-weight-500);
+  line-height: var(--line-height-m);
+}
+
+.text {
+  position: absolute;
+  color: var(--light);
+  text-align: center;
+}
+
+.primary {
+  background-color: var(--light-100);
+}
+
+.secondary {
+  background-color: var(--light-500);
+}
+
+.secondary .text {
+  color: var(--dark-500);
+}
+
+.pulse {
+  position: absolute;
+  background-color: inherit;
+  border-radius: 999px;
+}
+
+.root .pulse {
+  animation: red-dot-scale-fade 2s infinite;
+}
+
+.root .pulse.two {
+  animation-delay: 0.25s;
+}
+
+@keyframes red-dot-scale-fade {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: scale(3);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+.boxSize-8 {
+  height: 8px;
+  width: 8px;
+}
+.boxSize-12 {
+  height: 12px;
+  width: 12px;
+}
+.boxSize-16 {
+  height: 16px;
+  width: 16px;
+}
+.boxSize-20 {
+  height: 20px;
+  width: 20px;
+}
+.boxSize-24 {
+  height: 24px;
+  width: 24px;
+}
+
+.fs-0 {
+  font-size: var(--font-size-0);
+}
+.fs-8 {
+  font-size: var(--font-size-xs);
+}
+.fs-10 {
+  font-size: var(--font-size-s);
+}
+.fs-12 {
+  font-size: var(--font-size-m);
+}
+.stroke-none {
+  stroke-width: 0;
+}
+
+.stroke-small {
+  stroke-width: 1px;
+}
+.stroke-medium {
+  stroke-width: 2px;
+}
+.stroke-large {
+  stroke-width: 3px;
+}

@@ -24,22 +24,10 @@ export const ButtonPolymorph = <T extends ElementType = 'button'>(
 ) => {
   const { as: Component = 'button', className, size = 36, variant = 'primary', ...rest } = props
 
-  const styleNames = {
-    boxSizeStyle: {
-      height: `${size}px`,
-    },
-    indentsStyle: {
-      gap: size === 28 ? '4px' : size < 36 ? '6px' : '8px',
-      padding: size === 28 ? '6px 10px' : size < 36 ? '8px 12px' : '16px',
-    },
-    root: clsx(s.button, s[variant], className),
-  }
-
   return (
     <Component
-      className={styleNames.root}
+      className={clsx(s.button, s[variant], s[`size${size}`], className)}
       ref={ref}
-      style={{ ...styleNames.boxSizeStyle, ...styleNames.indentsStyle }}
       {...rest}
     />
   )

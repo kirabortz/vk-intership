@@ -17,7 +17,7 @@ const LoadingSvg = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => 
     >
       <animateTransform
         attributeName={'transform'}
-        dur={'0.75s'}
+        dur={'3s'}
         repeatCount={'indefinite'}
         type={'rotate'}
         values={'0 12 12;360 12 12'}
